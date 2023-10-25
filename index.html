@@ -1,1 +1,211 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+    <title>FPGAN-Control</title>
+
+    <style type="text/css">
+        body {
+          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+          font-weight:300;
+          font-size:18px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 1100px;
+        }
+        h1 {
+          font-weight:300;
+        }
+        h2 {
+          font-weight:300;
+        }
+
+        .disclaimerbox {
+          background-color: #eee;
+          border: 1px solid #eeeeee;
+          border-radius: 10px ;
+          -moz-border-radius: 10px ;
+          -webkit-border-radius: 10px ;
+          padding: 20px;
+        }
+
+        img.rounded {
+            border: 0px solid #eeeeee;
+            border-radius: 10px ;
+            -moz-border-radius: 10px ;
+            -webkit-border-radius: 10px ;
+        }
+
+	.bibtex pre {
+            margin-bottom: 0;
+            font-family: Consolas, Monaco, monospace;
+            white-space: pre-wrap; /* CSS 3 */
+            white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+            white-space: -pre-wrap; /* Opera 4-6 */
+            white-space: -o-pre-wrap; /* Opera 7 */
+            word-wrap: break-word; /* IE 5.5+ */
+            width: 90%;
+            color: #444;
+            padding: 10px;
+            background: #eee;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        a:link,a:visited
+        {
+            color: #1367a7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #208799;
+        }
+
+        hr
+        {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        .tableOne {
+            margin:auto;
+        }
+
+
+        .tableOne td {
+            text-align:center;
+        }
+        .image-container {
+            display: flex; /* Use flexbox to layout children */
+            justify-content: center; /* Center images horizontally */
+            align-items: center; /* Optional: Center images vertically */
+        }
+        .image-container img {
+            margin: 0 10px; /* Add some space between images */
+        }
+    </style>
+</head>
+<body>
+<div id="container"><!-- Start container -->
+    <div id="contentContainer"><!-- Start main content wrapper -->
+        <div id="content"><!-- Start content -->
+            <br>
+			<br>
+            <p style="text-align:center;"><span style="font-size:36px; color:#3d82f4 ;font-weight:bold;">FPGAN-Control: A Controllable Fingerprint Generator for Training with Synthetic Data</span>
+            <br>
+            <br>
+            <br>
+            <span style="font-size:22px;text-align:center">
+	            <a rel="external">Alon Shoshan</a>&nbsp;&nbsp;
+                <a rel="external">Nadav Bhonker</a>&nbsp;&nbsp;
+                <a rel="external">Ori Nizan</a>&nbsp;&nbsp;
+                <a rel="external">Emanuel Ben Baruch</a>
+                <br>
+                <a rel="external">Igor Kviatkovsky</a>&nbsp;&nbsp;
+                <a rel="external">Joshua Engelsma</a>&nbsp;&nbsp;
+                <a rel="external">Manoj Aggarwal</a>&nbsp;&nbsp;
+                <a rel="external">Gerard Medioni</a>
+            </span>
+            <br>
+            <br>
+            <span style="font-size:22px;text-align:center">
+                Amazon
+            </span>
+<!--            <br>-->
+<!--            <br>-->
+<!--            <p style="text-align:center;">-->
+<!--            <span style="font-size:20px">[<a href="https://arxiv.org/abs/2101.02477" rel="self">WACV 2024 Paper</a>]</span>&nbsp;&nbsp;-->
+<!--            <span style="font-size:20px">[<a href="https://drive.google.com/file/d/1uN_gsP4UzgkIQQbwyLg00gRvquoyLT27/view?usp=sharing" rel="self">Supplementary</a>]</span>&nbsp;&nbsp;-->
+<!--	        <span style="font-size:20px">[<a href="https://github.com/amazon-research/gan-control" rel="self">Code</a>]</span>-->
+<!--            <br>-->
+<!--            <br>-->
+	    <div class="section teaser">
+		<center><img src="resources/animation.gif" alt="Figure 1" width="300"></center>
+We present an animation of four fingerprints generated
+by FPGAN-Control with the following properties: (a) each of four
+animated fingerprints belongs to a unique synthetic identity which
+is preserved throughout the animation; (b) at every moment the
+appearance of each fingerprint is shared; and (c) the shared appearance gradually changes over time.
+	    </div>
+            <br>
+            <br>
+
+            <hr>
+            <center><h1>Abstract</h1></center>
+            <span style="font-size:18px; ">
+Training fingerprint recognition models using synthetic
+data has recently gained increased attention in the biometric community as it alleviates the dependency on sensitive personal data. Existing approaches for fingerprint
+generation are limited in their ability to generate diverse
+impressions of the same finger, a key property for providing effective data for training recognition models. To address this gap, we present FPGAN-Control, an identity preserving image generation framework which enables control
+over the fingerprint’s image appearance (e.g., fingerprint
+type, acquisition device, pressure level) of generated fingerprints. We introduce a novel appearance loss that encourages disentanglement between the fingerprint’s identity
+and appearance properties. In our experiments, we used the
+publicly available NIST SD302 (N2N) dataset for training
+the FPGAN-Control model. We demonstrate the merits of
+FPGAN-Control, both quantitatively and qualitatively, in
+terms of identity preservation level, degree of appearance
+control, and low synthetic-to-real domain gap. Finally,
+training recognition models using only synthetic datasets
+generated by FPGAN-Control lead to recognition accuracies that are on par or even surpass models trained using
+real data. To the best of our knowledge, this is the first work
+to demonstrate this.
+            </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p align="center">
+                <img height="280" id="pipeline" src="resources/images/pipeline.png">
+            </p>
+<!--            <p align="center">-->
+<!--			    <img height="240" id="train_gen" src="resources/images/train_gen.png">-->
+<!--                <img height="240" id="not_same_app_loss" src="resources/images/not_same_app_loss.png">-->
+<!--                <img height="240" id="same_app_loss" src="resources/images/same_app_loss.png">-->
+<!--			</p>-->
+            <br>
+            <span style="font-size:18px; ">
+In each training batch (a), both same ID pairs and same appearance pairs are
+generated. Same ID pairs have the same ID latent vector while same appearance pairs have the same appearance latent vector. The color of
+the inner image border corresponds to the fingerprint ID and the color of the outer border corresponds to the fingerprint appearance. Each
+image in the batch is blurred and downsampled, effectively removing it’s barometric features while still obtaining many of its appearance
+features. Blurred images with different appearance latents are pushed one from another (b), while blurred images with the same appearance
+latent are pulled towards each other (c).
+            </span>
+            <br>
+            <hr>
+
+<!--            <center><h1>Citation</h1></center>-->
+<!--            <div class="section bibtex">-->
+<!--                <pre>-->
+<!--@InProceedings{Shoshan_2021_ICCV,-->
+<!--    author    = {Shoshan, Alon and Bhonker, Nadav and Kviatkovsky, Igor and Medioni, G\'erard},-->
+<!--    title     = {GAN-Control: Explicitly Controllable GANs},-->
+<!--    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},-->
+<!--    month     = {October},-->
+<!--    year      = {2021},-->
+<!--    pages     = {14083-14093}-->
+<!--}-->
+                </pre>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+		</div><!-- End Footer -->
+    </div><!-- End main content wrapper -->
+</div><!-- End container -->
+
+
+
+
+</body>
+</html>
