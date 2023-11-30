@@ -179,18 +179,29 @@ latent are pulled towards each other (c).
             </span>
             <br>
             <hr>
-
-<!--            <center><h1>Citation</h1></center>-->
-<!--            <div class="section bibtex">-->
-<!--                <pre>-->
-<!--@InProceedings{Shoshan_2021_ICCV,-->
-<!--    author    = {Shoshan, Alon and Bhonker, Nadav and Kviatkovsky, Igor and Medioni, G\'erard},-->
-<!--    title     = {GAN-Control: Explicitly Controllable GANs},-->
-<!--    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},-->
-<!--    month     = {October},-->
-<!--    year      = {2021},-->
-<!--    pages     = {14083-14093}-->
-<!--}-->
+            <center><h1>Generation results of FPGAN-Control trained using different w<sub>app</sub></h1></center>
+            <p align="center">
+                <img height="700" id="results" src="resources/images/results.png">
+            </p>
+            <span style="font-size:18px; ">
+For a specific FPGAN-Control model, each column
+represents images generated with the same ID latent vector input and each row represents images generated with the same appearance
+latent vector input. For visualization of the appearance loss, the small images in green borders show the blurred representation of the
+fingerprint image used by the loss.
+            </span>
+            <br>
+            <hr>
+            <center><h1>Citation</h1></center>
+            <div class="section bibtex">
+                <pre>
+@misc{shoshan2023fpgancontrol,
+      title={FPGAN-Control: A Controllable Fingerprint Generator for Training with Synthetic Data},
+      author={Alon Shoshan and Nadav Bhonker and Emanuel Ben Baruch and Ori Nizan and Igor Kviatkovsky and Joshua Engelsma and Manoj Aggarwal and Gerard Medioni},
+      year={2023},
+      eprint={2310.19024},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
                 </pre>
             </div>
             <br>
